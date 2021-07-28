@@ -1,0 +1,95 @@
+Template:
+    As a player, I want to ___________, so that _______________.
+=================================================================================
+Start game:
+EPIC: 
+    As a player, I want to begin the game with a start interface, 
+        so that I can choose different game modes to play.
+User Stories:
+    As a player, I want to have different game modes displayed as buttons, so that
+    I can choose by clicking them.
+
+=================================================================================
+Character:
+Epic: 
+As a player, I want to manage my character, so that I can prepare my character
+for the following loop.
+
+User stories:
+    As a player, I want to have a interface for character information, so that I 
+    can view my equipments and inventory.
+        1. weapon slot
+        2. armor slot
+        3. inventory slots
+        3. display item pictures in slots
+
+    As a player, I want to be able to drag items in inventory interface, so that
+    I can choose equipments to equip and item to use.
+        1. holding shift and click to drag to move item between slots
+        2. click to automatically use item (use on release)
+        3. holding click without shift for 3 sec to cancel item use
+
+    As a player, I want to monitor character status and map of game world, so that 
+    I can build my strategy for next loop.
+        1. display map at left half screen
+        2. display number for money and experience
+        3. display health bar and number for health
+=================================================================================
+Map view
+Epic:
+As a player, I want to preview the game map before the start of each loop, so that
+I can prepare my character.
+
+User stories:
+    As a player, I want to view all cards I have at the bottom, so that I can choose
+    to use or keep them freely.
+        1. Display cards at bottom
+        2. Discard the oldest card if overlimit
+        3. Drag to move card to any location of the map
+        4. Release to use the card, if current location is valid
+        5. Otherwise, put card back to bottom (the same postion)
+
+    As a player, I want to view the path, so that I can prepare my strategy.
+        1. Display Monster, Building, Items correctly
+        2. Hovering mouse above image tiles to display tile name
+        3. Click image tiles to display more information
+
+=================================================================================
+Gameplay:
+Epic:
+As a player, I want to play the game at my own pace, so that I would not panic
+and rage quit.
+
+User story:
+    As a player, I want to the game to auto-pause before each loop, so that I can 
+    be fully prepared.
+        1. Auto-pause after each loop
+        2. Shopping window pop-up after pausing
+        3. Closing shopping window to start next loop
+
+    As a player, I want to pause the game during the loop, so that I can change 
+    equipments and use potion at the middle of a fight.
+        1. Press SPACE to pause charactor and monster movement
+        2. Able to interact with inventory and use card on map
+        3. Press SPACE again to continue the game
+
+    As a developer, I want to use cheat to test game functionality, so that I 
+    don't have to get good.
+        1. Press SHIFT + SPACE to pause, and pop cheat-code window.
+        2. Typing "UNSWSUCKS" + ENTER -> instantly kill monsters
+        3. Typing "WHOSYOURDADDY" + ENTER -> invincible
+        4. Typing "GREEDISGOOD" + ENTER -> give money, health and experience
+        5. Press enter to confirm cheat-code
+        6. Press SPACE again to close pop window and continue game
+
+    As a player, I want to save and load game, so that I can continue playing 
+    later.
+        1. Click save button to store current game state
+        2. Click load button to load saved game state
+        3. Dying instantly clear saved game state
+
+/*
+    As a developer, I want to display ads (rewarding resurrection) after player 
+    dies, so that I can encourage the player to play for higher passion.
+*/
+=================================================================================
