@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<!-- TODO = modify and expand the GUI? -->
+<!-- anchorPaneRoot is the background of the main game -->
+
+<AnchorPane fx:id="anchorPaneRoot" onKeyPressed="#handleKeyPress" prefHeight="248.0" prefWidth="0.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <!-- HBox is used to stack items horizontally left to right -->
+   <HBox prefHeight="248.0" prefWidth="141.0">
+      <!-- VBox is used to stack items vertically top to bottom -->
+      <VBox>
+         <children>
+             <!-- squares contains the path, buildings, character, and enemies -->
+            <GridPane fx:id="squares" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+               <columnConstraints>
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+               </rowConstraints>
+               <children>
+
+               </children>
+            </GridPane>
+
+            <!-- this BorderPane contains the ground under the cards and the cards -->
+            <BorderPane>
+               <bottom>
+                     <!-- cards GridPane holds the cards which can be used on the map -->
+                     <GridPane fx:id="cards" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+                        <columnConstraints>
+                           <ColumnConstraints />
+                        </columnConstraints>
+                        <rowConstraints>
+                           <RowConstraints />
+                        </rowConstraints>
+                        <children>
+
+                        </children>
+                     </GridPane>
+               </bottom>
+            </BorderPane>
+         </children>
+      </VBox>
+      <VBox>
+         <children>
+            <!-- equippedItems contains the equipment equipped by the character in special slots -->
+            <!-- TODO = extend this to have slots for equipping armour, shields, helmets, and any other equippable items -->
+            <GridPane fx:id="equippedItems" prefHeight="83.0" prefWidth="140.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                  <RowConstraints />
+               </rowConstraints>
+               <children>
+                  <!-- swordCell is the cell where a sword intended to be equipped will be dragged by the human player -->
+                  <ImageView id="swordCell" GridPane.columnIndex="0" GridPane.rowIndex="1">    
+                     <image>
+                        <Image url="@../../images/sword_unequipped.png" />
+                     </image>
+                  </ImageView>
+                  <!-- blankCell is an empty cell -->
+                  <ImageView id="blankCell" GridPane.columnIndex="1" GridPane.rowIndex="1" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">    
+                     <image>
+                        <Image url="@../../images/image_just_black_tiny.png" />
+                     </image>
+                  </ImageView>
+                  <!-- shieldCell is the cell where a shield intended to be equipped will be dragged by the human player -->
+                  <ImageView id="shieldCell" GridPane.columnIndex="2" GridPane.rowIndex="1" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">    
+                     <image>
+                        <Image url="@../../images/shield_unequipped.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView id="blankCell" fitWidth="32.0" GridPane.columnIndex="1">
+                     <image>
+                        <Image url="@../../images/helmet_slot.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </GridPane>
+
+            <!-- unequippedInventory is for unequipped items, which can be dragged into the equipped inventory -->
+            <GridPane fx:id="unequippedInventory" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+               <columnConstraints>
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+               </rowConstraints>
+               <children>
+                  
+               </children>
+            </GridPane>
+
+            <!-- clicking this button returns the human player to the main menu -->
+            <Button onAction="#switchToMainMenu" prefHeight="11.0" prefWidth="140.0" text="Exit to Main Menu" />
+            <Button mnemonicParsing="false" onAction="#showGoal" prefHeight="5.0" prefWidth="140.0" text="Goal" />
+            <GridPane fx:id="stats" prefHeight="97.0" prefWidth="123.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="43.0" minWidth="10.0" prefWidth="21.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="91.0" minWidth="10.0" prefWidth="89.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ImageView fitHeight="85.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/heart.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="92.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                     <image>
+                        <Image url="@../../images/gold_pile.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="78.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+                     <image>
+                        <Image url="@../../images/exp.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="healthTxt" alignment="CENTER" editable="false" GridPane.columnIndex="1" />
+                  <TextField fx:id="goldTxt" alignment="CENTER" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="expTxt" alignment="CENTER" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <GridPane alignment="CENTER" prefHeight="74.0" prefWidth="140.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="127.0" minWidth="10.0" prefWidth="127.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="loopNumber" alignment="CENTER" contentDisplay="CENTER" ellipsisString="Loop: No." prefHeight="19.0" prefWidth="119.0" text="Loop: No." textAlignment="CENTER" />
+                  <Label fx:id="modeLabel" alignment="CENTER" contentDisplay="CENTER" ellipsisString="GameMode" prefHeight="19.0" prefWidth="121.0" text="GameMode" textAlignment="CENTER" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </HBox>
+</AnchorPane>

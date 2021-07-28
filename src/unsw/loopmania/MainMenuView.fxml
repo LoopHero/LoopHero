@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<!-- TODO = modify and expand the range of menus available from the menu menu, and develop game modes you can select when starting a new game -->
+<!-- vertically stacked label and button -->
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="mainMenu" text="Main Menu" />
+      <!-- clicking button should start/resume the game -->
+      <Button fx:id="startGameButton" onAction="#switchToGame" onMouseEntered="#display" onMouseExited="#undisplay" prefHeight="27.0" prefWidth="200.0" text="Start Game" />
+      <!-- <Button fx:id="startGameButton1" onAction="#switchToGameBerserker" onMouseEntered="#displayBerserker" onMouseExited="#undisplay" prefHeight="27.0" prefWidth="200.0" text="Start Game (Berserker)" /> -->
+      <!-- <Button fx:id="startGameButton2" onAction="#switchToGameSurvival" onMouseEntered="#displaySurvival" onMouseExited="#undisplay" prefHeight="27.0" prefWidth="200.0" text="Start Game (Survival)" /> -->
+      <Button fx:id="restartGameButton" onAction="#reStartGame" text="Good Luck!" />
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
