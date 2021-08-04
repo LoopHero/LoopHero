@@ -1,0 +1,4 @@
+#gamemenu {
+    -fx-background-image: url("./game_menu_background.png");
+    -fx-background-size: cover;
+}

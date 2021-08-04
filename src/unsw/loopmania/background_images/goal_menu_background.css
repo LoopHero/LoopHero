@@ -1,0 +1,4 @@
+.root {
+    -fx-background-image: url("./goal_menu_background.jpg");
+    -fx-background-size: cover;
+}

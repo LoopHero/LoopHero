@@ -1,0 +1,4 @@
+.root {
+    -fx-background-image: url("./main_menu_background.jpeg");
+    -fx-background-size: cover;
+}

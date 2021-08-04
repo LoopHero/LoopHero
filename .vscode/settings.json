@@ -1,0 +1,14 @@
+{
+    "java.import.gradle.enabled": false,
+    "java.import.gradle.wrapper.enabled": false,
+    "java.project.sourcePaths": [
+        "src",
+        ""
+    ],
+    "java.test.config": [
+        {
+            "name": "JUnit",
+            "workingDirectory": "${workspaceFolder}"
+        }
+    ]
+}

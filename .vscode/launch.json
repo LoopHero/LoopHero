@@ -1,0 +1,24 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    // NOTE - we turn assertions on to help debugging, although they shouldn't be used in production code
+    "version": "0.2.0",
+    "cwd": "${workspaceRoot}",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Test",
+            "request": "launch",
+            "mainClass": "Test",
+            "projectName": "21T2-cs2511-project_ca413dde"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - LoopManiaApplication",
+            "request": "launch",
+            "vmArgs": "--module-path ./lib --add-modules javafx.controls,javafx.fxml,javafx.media -enableassertions",
+            "mainClass": "unsw.loopmania.LoopManiaApplication"
+        }
+    ]
+}
